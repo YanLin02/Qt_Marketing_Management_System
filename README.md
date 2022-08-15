@@ -1,0 +1,2 @@
+# Qt_Marketing_Management_System
+2022暑期学校语言课程设计大作业
