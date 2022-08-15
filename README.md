@@ -6,7 +6,7 @@
 
 
 
-> 今日我们相聚于此,是为了纪念Qt大作业的完成。它的完成对于所有「学生」而言,值得足足两个星期的自由鼓励。
+> 今日我们相聚于此, 是为了纪念Qt大作业的完成。它的完成对于所有「学生」而言, 值得足足两个星期的自由鼓励。
 
 
 
@@ -65,7 +65,7 @@
 
 **先从C++功能入手：**
 
-​		创建Sale、Goods和`MarketingManager`数据类，存储相关数据。  
+​		创建`Sale`、`Goods`和`MarketingManager`数据类，存储相关数据。  
 
 ​		为数据类添加功能函数。  
 
@@ -105,9 +105,9 @@
 
 ## 文件与对象描述
 
-`sale.h/.cpp`: 包含Sale类，具有存储销售信息的数据成员，通过构造函数可以为信息赋值，成员函数`saveData`可以向指定文件流中依次传输数据。
+`sale.h/.cpp`: 包含`Sale`类，具有存储销售信息的数据成员，通过构造函数可以为信息赋值，成员函数`saveData`可以向指定文件流中依次传输数据。
 
-`goods.h/.cpp`: 包含Goods类，具有存储商品信息的数据成员，通过构造函数可以为信息赋值，另有`m_Remaining` 成员储存剩余数量，`v_SalesData`成员利用`QVector<Sale>` 保存销售数据，`m_NumberofData`存储销售数据集数据量便于维护。成员函数`findSaleData`传入查找类型和关键词查找指定销售信息，返回`QVector<const Sale*>`类型，存储查找到的销售信息的指针。成员函数`addSalesDate`，`deleteSalesDate`用于在检测后添加或删除销售信息。重载==便于使用算法库。另有`saveSalesFile`，`deleteSalesFile`，`readSalesFile`函数用于处理销售信息文件，成员函数`saveGoods`可以向指定文件流中依次传输数据*
+`goods.h/.cpp`: 包含`Goods`类，具有存储商品信息的数据成员，通过构造函数可以为信息赋值，另有`m_Remaining` 成员储存剩余数量，`v_SalesData`成员利用`QVector<Sale>` 保存销售数据，`m_NumberofData`存储销售数据集数据量便于维护。成员函数`findSaleData`传入查找类型和关键词查找指定销售信息，返回`QVector<const Sale*>`类型，存储查找到的销售信息的指针。成员函数`addSalesDate`，`deleteSalesDate`用于在检测后添加或删除销售信息。重载==便于使用算法库。另有`saveSalesFile`，`deleteSalesFile`，`readSalesFile`函数用于处理销售信息文件，成员函数`saveGoods`可以向指定文件流中依次传输数据*
 
 `marketingmanager.h/.cpp`: 包含`MarketingManager`类，具有`QVector<Goods>`类型成员 `v_GoodsList`存储商品清单，`m_NumberofGoods` 成员存储商品数量。成员函数`findGoods`传入查找类型和关键词查找指定商品信息，返回`QVector<const  Goods*>`类型，存储查找到的商品的指针。`findGoods`，`deleteGoods`用于在检测后添加或删除商品，另有`saveGoodsFile`，`deleteGoodsFile`，`readGoodsFile`函数用于处理商品信息文件，成员函数`saveAllFile`，`readAllFile` `deleteAllFile`处理所有文件。
 
