@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>商品销售管理系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/icon/add-cart.png</normaloff>:/icon/add-cart.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="goodsTab">
+       <attribute name="title">
+        <string>商品目录</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QTableView" name="GoodsTableView"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileOperate">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="a_openFile"/>
+    <addaction name="separator"/>
+    <addaction name="a_saveFile"/>
+    <addaction name="a_saveAsAnother"/>
+   </widget>
+   <widget class="QMenu" name="editOperate">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="a_addGoods"/>
+    <addaction name="a_deleteGoods"/>
+    <addaction name="separator"/>
+    <addaction name="a_addSaleData"/>
+    <addaction name="a_deleteSaleData"/>
+    <addaction name="separator"/>
+    <addaction name="a_deleteAllFile"/>
+   </widget>
+   <widget class="QMenu" name="viewOperate">
+    <property name="title">
+     <string>查看</string>
+    </property>
+    <addaction name="a_findGoods"/>
+    <addaction name="separator"/>
+    <addaction name="a_showSaleData"/>
+    <addaction name="a_FindSaleData"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>计算</string>
+    </property>
+    <addaction name="a_getProfile"/>
+   </widget>
+   <addaction name="fileOperate"/>
+   <addaction name="editOperate"/>
+   <addaction name="viewOperate"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="a_openFile"/>
+   <addaction name="a_saveFile"/>
+   <addaction name="a_saveAsAnother"/>
+   <addaction name="separator"/>
+   <addaction name="a_addGoods"/>
+   <addaction name="a_deleteGoods"/>
+   <addaction name="separator"/>
+   <addaction name="a_findGoods"/>
+   <addaction name="a_getProfile"/>
+   <addaction name="separator"/>
+   <addaction name="a_showSaleData"/>
+   <addaction name="a_FindSaleData"/>
+   <addaction name="a_addSaleData"/>
+   <addaction name="a_deleteSaleData"/>
+   <addaction name="separator"/>
+   <addaction name="a_About"/>
+  </widget>
+  <action name="a_openFile">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icon/file-open.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+   <property name="toolTip">
+    <string>选择并打开文件</string>
+   </property>
+  </action>
+  <action name="a_saveFile">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icon/save.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>保存文件</string>
+   </property>
+   <property name="toolTip">
+    <string>保存当前文件</string>
+   </property>
+  </action>
+  <action name="a_addGoods">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icon/goods_wh_inStock.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>添加商品</string>
+   </property>
+   <property name="toolTip">
+    <string>输入商品信息添加商品</string>
+   </property>
+  </action>
+  <action name="a_deleteGoods">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/delete.png</normaloff>:/icon/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除商品</string>
+   </property>
+   <property name="toolTip">
+    <string>删除选中的商品</string>
+   </property>
+  </action>
+  <action name="a_findGoods">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/find.png</normaloff>:/icon/find.png</iconset>
+   </property>
+   <property name="text">
+    <string>查找商品</string>
+   </property>
+   <property name="toolTip">
+    <string>查找指定类型的商品</string>
+   </property>
+  </action>
+  <action name="a_getProfile">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/calculate_money.png</normaloff>:/icon/calculate_money.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算利率</string>
+   </property>
+   <property name="toolTip">
+    <string>输入售价计算利率</string>
+   </property>
+  </action>
+  <action name="a_showSaleData">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/goods_wh_Detail.png</normaloff>:/icon/goods_wh_Detail.png</iconset>
+   </property>
+   <property name="text">
+    <string>销售记录</string>
+   </property>
+   <property name="toolTip">
+    <string>查看选中商品的销售记录</string>
+   </property>
+  </action>
+  <action name="a_addSaleData">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/goods_wh_outStock.png</normaloff>:/icon/goods_wh_outStock.png</iconset>
+   </property>
+   <property name="text">
+    <string>新增记录</string>
+   </property>
+   <property name="toolTip">
+    <string>向选择的商品中增加销售数据</string>
+   </property>
+  </action>
+  <action name="a_deleteSaleData">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/delete.png</normaloff>:/icon/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除记录</string>
+   </property>
+   <property name="toolTip">
+    <string>删除选择的销售数据</string>
+   </property>
+  </action>
+  <action name="a_saveAsAnother">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/save-as.png</normaloff>:/icon/save-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>转存文件</string>
+   </property>
+   <property name="toolTip">
+    <string>将文件保存到另一位置</string>
+   </property>
+  </action>
+  <action name="a_deleteAllFile">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/delete.png</normaloff>:/icon/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>清除文件</string>
+   </property>
+  </action>
+  <action name="a_About">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="a_FindSaleData">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/icon/find.png</normaloff>:/icon/find.png</iconset>
+   </property>
+   <property name="text">
+    <string>查找记录</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

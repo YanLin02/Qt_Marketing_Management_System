@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon/add-cart.png</file>
+        <file>icon/file-open.png</file>
+        <file>icon/find.png</file>
+        <file>icon/goods_wh_Detail.png</file>
+        <file>icon/goods_wh_inStock.png</file>
+        <file>icon/goods_wh_outStock.png</file>
+        <file>icon/profile.png</file>
+        <file>icon/save.png</file>
+        <file>icon/delete.png</file>
+        <file>icon/calculate_money.png</file>
+        <file>icon/save-as.png</file>
+    </qresource>
+</RCC>
